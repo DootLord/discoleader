@@ -14,8 +14,9 @@
 const SCORES = {
   // ── SONG 1: ECHOLOKATORS ────────────────────
   1: [
+    { name: 'PvMayo',   avatar: 'assets/images/PvMayo.webp',   score: 85977 },
     { name: 'DootLord', avatar: 'assets/images/dootlord.webp', score: 81584 },
-    { name: 'PvMayo',   avatar: 'assets/images/PvMayo.webp',   score: 80980 },
+    ,
     // { name: 'NewPlayer', avatar: 'assets/images/newplayer.webp', score: 50000 },
   ],
   // ── SONG 2: MANIAC ──────────────────────────
