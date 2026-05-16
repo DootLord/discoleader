@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dead As Disco — Score Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       SITE HEADER
+  ════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="header-bg-bolts"></div>
+    <div class="header-starburst"></div>
+    <div class="header-content">
+      <div class="logo-block">
+        <span class="logo-dead">DEAD</span>
+        <span class="logo-as">AS</span>
+        <span class="logo-disco">DISCO</span>
+      </div>
+      <p class="header-sub">SCORE TRACKER &mdash; BUY THE GAME, BEAT US, JOIN US. YES <b>BUY</b> THE GAME!! NOT PIRATE! <b><i>LOOKING AT YOU DAN</i></b></p>
+    </div>
+    <div class="header-ink-border"></div>
+    <div class="lightning-strip"></div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       SONG TABS NAV
+  ════════════════════════════════════════════ -->
+  <!-- Hidden audio players -->
+  <audio id="audio-1" src="assets/music/echolokators.mp3" loop preload="auto"></audio>
+  <audio id="audio-2" src="assets/music/maniac.mp3" loop preload="none"></audio>
+
+  <nav class="song-nav">
+    <button class="song-tab active" data-song="1" data-audio="audio-1" style="--tab-color:#00e5ff">
+      <span class="tab-icon">⚡</span>
+      <span class="tab-name">ECHOLOKATORS</span>
+      <span class="tab-sub">METAL · SONG 1</span>
+    </button>
+    <button class="song-tab" data-song="2" data-audio="audio-2" style="--tab-color:#39ff14">
+      <span class="tab-icon">🤘</span>
+      <span class="tab-name">MANIAC</span>
+      <span class="tab-sub">PUNK · SONG 2</span>
+    </button>
+    <button class="song-tab locked" data-song="3" style="--tab-color:#a020f0">
+      <span class="tab-icon">💀</span>
+      <span class="tab-name">SONG 3</span>
+      <span class="tab-sub">COMING SOON</span>
+    </button>
+    <button class="song-tab locked" data-song="4" style="--tab-color:#ffd700">
+      <span class="tab-icon">🎸</span>
+      <span class="tab-name">SONG 4</span>
+      <span class="tab-sub">COMING SOON</span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════ -->
+  <main class="main-content">
+
+    <!-- ─── STICKY AUDIO PLAYER BAR ─── -->
+    <div class="audio-player-bar" id="audio-bar" style="--current-song-color:#00e5ff">
+      <button class="play-btn" id="play-btn" title="Play / Pause">▶</button>
+      <span class="track-name"><span class="blink">▮</span> <span id="track-label">ECHOLOKATORS</span></span>
+      <div class="audio-waveform paused" id="waveform">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- ─── SONG 1 PANEL ─── -->
+    <section class="song-panel active" id="song-panel-1">
+
+      <div class="song-hero">
+        <div class="halftone-overlay"></div>
+        <div class="song-hero-inner">
+          <div class="song-title-block">
+            <span class="song-number">01</span>
+            <h2 class="song-name">ECHOLOKATORS</h2>
+            <p class="song-flavour">It's not a phase mum!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEADERBOARD -->
+      <div class="leaderboard-wrap">
+        <h3 class="leaderboard-title">LEADERBOARD</h3>
+        <div class="leaderboard" id="leaderboard-1"></div>
+      </div>
+
+    </section>
+
+    <!-- ─── SONG 2 PANEL — MANIAC ─── -->
+    <section class="song-panel" id="song-panel-2">
+
+      <div class="song-hero song-hero--punk">
+        <div class="halftone-overlay"></div>
+        <div class="song-hero-inner">
+          <div class="song-title-block">
+            <span class="song-number">02</span>
+            <h2 class="song-name song-name--punk">MANIAC</h2>
+            <p class="song-flavour song-flavour--punk">Qwerked up white boy with the sauce.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEADERBOARD -->
+      <div class="leaderboard-wrap leaderboard-wrap--punk">
+        <h3 class="leaderboard-title leaderboard-title--punk">LEADERBOARD</h3>
+        <div class="leaderboard" id="leaderboard-2"></div>
+      </div>
+
+    </section>
+
+    <!-- ─── SONG 3 PANEL (locked) ─── -->
+    <section class="song-panel locked-panel" id="song-panel-3">
+      <div class="locked-screen" style="--lock-color:#a020f0">
+        <div class="halftone-overlay"></div>
+        <span class="lock-icon">🔒</span>
+        <h2>SONG 3</h2>
+        <p>Not yet unleashed.</p>
+      </div>
+    </section>
+
+    <!-- ─── SONG 4 PANEL (locked) ─── -->
+    <section class="song-panel locked-panel" id="song-panel-4">
+      <div class="locked-screen" style="--lock-color:#ffd700">
+        <div class="halftone-overlay"></div>
+        <span class="lock-icon">🔒</span>
+        <h2>SONG 4</h2>
+        <p>Not yet unleashed.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <span>Yet another WIP project by DootLord &mdash; Yeah, he's hot, right?</span>
+  </footer>
+
+  <!-- ─── IMPACT OVERLAY ─── -->
+  <div class="impact-overlay" id="impact-overlay">
+    <div class="impact-burst"></div>
+    <div class="impact-word" id="impact-word"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
